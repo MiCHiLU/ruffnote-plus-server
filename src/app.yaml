@@ -1,0 +1,18 @@
+application: theruffnote
+version: 1
+runtime: go
+api_version: go1
+threadsafe: true
+
+handlers:
+# Static assets
+- url: /favicon.ico
+  static_files: static/img/favicon.ico
+  upload: favicon.ico
+  mime_type: image/x-icon
+- url: /static
+  static_dir: static
+- url: /_ah/spi/.*
+  script: _go_app
+- url: /.*
+  script: _go_app
