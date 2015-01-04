@@ -27,7 +27,7 @@ var (
 func RegisterService() (rpcService *endpoints.RPCService, err error) {
 	api := &RuffnoteApi{}
 	rpcService, err = endpoints.RegisterService(api,
-		"ruffnote_plus", "v1", "ruffnote+", true)
+		"ruffnote_plus", "v1", "ruffnote+ in developmet. Data will be volatile.", true)
 	if err != nil {
 		return
 	}
